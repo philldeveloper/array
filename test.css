@@ -39,7 +39,7 @@ nav.navbar#main{
 
 .section-photo{
     /*background: linear-gradient(0deg, rgba(255, 0, 150, 0.3), rgba(255, 0, 150, 0.3)), url("https://images.pexels.com/photos/4443181/pexels-photo-4443181.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")no-repeat center center;*/
-    background: url("https://images.pexels.com/photos/4443181/pexels-photo-4443181.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")no-repeat center center;
+    background: url("./img/bg.jpeg")no-repeat center center;
     background-size: cover;
 }
 
