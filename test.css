@@ -55,3 +55,18 @@ nav.navbar#main{
     font-weight: 600 !important;
     letter-spacing: 2px;
 }
+
+
+embed, iframe, img, object, video {
+    max-width: 100%;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+audio, canvas, embed, iframe, img, object, svg, video {
+    display: block;
+    vertical-align: middle;
+}
