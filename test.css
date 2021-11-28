@@ -15,8 +15,17 @@ nav.navbar#main{
     font-weight: 900;
 }
 
-.saira-font{
+.saira-font {
     font-family: 'Saira', sans-serif !important;
+}
+
+.card-title{
+    font-family: 'Saira', sans-serif !important;
+    text-transform: uppercase !important;
+}
+
+.card:hover{
+    border: 1px solid #A20ADF;
 }
 
 
@@ -43,6 +52,9 @@ nav.navbar#main{
     background-size: cover;
 }
 
+.mt-7{
+    margin-top: 5rem !important;
+}
 /*BUTTONS*/
 
 .square-button{
@@ -70,38 +82,18 @@ audio, canvas, embed, iframe, img, object, svg, video {
     vertical-align: middle;
 }
 
-
-ul.list-group li{
-    margin: 0px 20px;
-}
-
-.list-group-item{
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: 'Outfit', sans-serif !important;
-    border: 1px solid #A20ADF !important;
-    background-color: white !important;
-}
-/*
-.list-group-item:hover{
-    background-color: #A20ADF !important;
-    color: #eeeeee !important;
-}*/
-
-
 /* FOOTER */
 
 footer#footer {
-    background: #404040;
+    background: #7a04a8 !important;
     padding: 0 0 30px 0;
     color: #fff;
     font-size: 14px
 }
 
 footer#footer .footer-top {
-    background: #3b3b3b;
-    border-top: 1px solid #474747;
-    border-bottom: 1px solid #474747;
+    border-top: 1px solid #7a04a8 !important;
+    border-bottom: 1px solid #7a04a8 !important;
     padding: 60px 0 30px 0
 }
 
@@ -128,7 +120,7 @@ footer#footer .footer-top .footer-info p {
 footer#footer .footer-top .social-links a {
     font-size: 18px;
     display: inline-block;
-    background: #545454;
+    background: #7a04a8 !important;
     color: #fff;
     line-height: 1;
     padding: 8px 0;
