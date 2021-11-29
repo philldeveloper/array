@@ -32,6 +32,16 @@ nav.navbar#main{
     border: 1px solid #A20ADF !important;
 }
 
+.border-category-card{
+    border-left: 3px solid #7a04a8 !important;
+    border-right: none !important;
+}
+.border-category-card:hover{
+    background-image: var(--bs-gradient)!important;
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
+}
+
 
 /*ARRAY COLORS*/
 .text-array{
