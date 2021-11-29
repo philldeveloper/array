@@ -24,8 +24,12 @@ nav.navbar#main{
     text-transform: uppercase !important;
 }
 
-.card:hover{
+.card#category:hover{
     border: 1px solid #A20ADF;
+}
+
+.card#category{
+    border: 1px solid #A20ADF !important;
 }
 
 
