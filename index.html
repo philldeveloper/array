@@ -16,8 +16,9 @@
     <link rel="stylesheet" href="./test.css">
 
     <!--bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,22 +30,23 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <style type="text/css">
-      html, body {
-        margin: 0;
-        padding: 0;
+      /* Show it is fixed to the top */
+      body {
+        min-height: 75rem;
+        padding-top: 2.5rem;
       }
-  
+
       * {
         box-sizing: border-box;
       }
   
       .slider {
-        width: 90%;
+        width: 70%;
         margin: 100px auto;
       }
   
       .slick-slide {
-        margin: 0px 40px;
+        margin: 0px 10px;
       }
   
       .slick-slide img {
@@ -72,302 +74,275 @@
     
 </head>
 <body>
-    <nav class="navbar navbar-light bg-white fixed-top" id="main">
-        <div class="container-fluid">
-          <a class="navbar-brand font-weight-bold outfit-bold-font my-auto" href="./index.html">ARRAY</a>
-          <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
-            <p class="font-weight-bold outfit-bold-font my-auto">ACESSAR MENU</p>
-          </a>
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title text-array font-weight-bold outfit-bold-font my-auto" id="offcanvasNavbarLabel">Array</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./catalogo-cursos.html">Catálogo de Cursos</a>
-                </li>
-                <!--li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li>
-                      <hr class="dropdown-divider">
-                    </li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </li-->
-              </ul>
-              <label for="" class="font font-weight-bold outfit-bold-font my-auto text-uppercase py-3">Pesquise por um Curso:</label>
-              <form class="d-flex">
-                <input class="form-control me-2" required type="search" placeholder="Search" aria-label="Search">
-                <button class="btn text-white" style="background-color: #A20ADF !important;" type="submit"><i class="fa fa-search"></i></button>
-              </form>
+  <nav class="navbar navbar-expand-md navbar-light pb-3 pt-3 fixed-top bg-white border-bottom">
+    <a class="navbar-brand font-weight-bold outfit-bold-font my-auto" href="./index.html">ARRAY</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="rounded-0 form-control mr-sm-2" style="width: 400px" type="text" placeholder="Começe procurando por aqui" aria-label="Começe procurando por aqui">
+        <button class="btn rounded-0 my-2 my-sm-0" type="submit" style="background-color: #A20ADF !important;"><i class="text-white fa fa-search"></i></button>
+      </form>
+    </div>
+  </nav>
 
-              <!--RESULTS FROM FORM SEARCH-->
-              <div class="py-4">
-                <label for="" class="text-secondary font-weight-bold outfit-bold-font my-auto text-uppercase py-3">RESULTADOS ENCONTRADOS:</label>
-                <hr>
+  <main role="main" class="">
 
-                <ul class="list-group border-0">
-                  <li class="border-0 nav-link list-group-item d-flex justify-content-between align-items-center">
-                    <a class="" href="#">A list item</a>
-                    <span class="badge bg-primary rounded-pill">14</span>
-                  </li>
-                  <li class="border-0 nav-link list-group-item d-flex justify-content-between align-items-center">
-                    <a class="" href="#">A second list item</a>
-                    <span class="badge bg-primary rounded-pill">2</span>
-                  </li>
-                  <li class="border-0 nav-link list-group-item d-flex justify-content-between align-items-center">
-                    <a class="" href="#">A third list item</a>
-                    <span class="badge bg-primary rounded-pill">1</span>
-                  </li>
-                </ul>
-              </div>
-
-              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 py-lg-4" style="position: fixed; bottom: 0;">
-                <li class="nav-item">
-                  <a class="navbar-brand font-weight-bold outfit-bold-font my-auto" href="#">Fazer Login</a>
-                </li>
-                <li class="nav-item">
-                  <a class="navbar-brand font-weight-bold outfit-bold-font text-primary my-auto" href="#">Criar uma Conta</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <section class="bg-light-1 p-5 pb-0">
+      <div class="row m-0 justify-content-center py-5">
+        <div class="col-lg-3 offset-1">
+          <h1 class="outfit-bold-font pb-4 text-dark text-uppercase" style="font-size: -webkit-xxx-large !important;">
+            Uma  <span class="text-array">nova</span> maneira de aprender <span class="text-array">programação</span>.
+          </h1>
+          <p class="lead text-dark outfit-font pb-3">
+            Build new skills for that “this is my year” feeling with courses, certificates, and degrees from world\-class universities and companies.
+          </p>
+          <button class="btn btn-xl square-button bg-success outfit-bold-font">SAIBA MAIS</button>
         </div>
-    </nav>
-    <!--navbar-end-->
 
-
-    <!--HEADER-->
-    <header class="p-5 bg-light-0 vh-100 section-photo">
-        <div class="row justify-content-center">
-            <div class="text-center" style="position: absolute; top: 45%;">
-                <h1 class="display-1 text-light saira-font"> <span class="text-white">CODE</span> DAY <span class="">70%</span></h1>
-                <h3 class="saira-font text-light pb-5">LOREM IPSUM DORMO EPSUM</h3>
-                <button class="btn btn-xl square-button outfit-bold-font">ESTUDAR AGORA</button>
-            </div>
+        <div class="offset-2 col-lg-4 d-none d-md-block d-lg-block d-xl-block">
+            <a href="#9">
+              <img src="./img/12.png" alt="">
+            </a>
         </div>
-    </header>
-
-
-    <!--SECTION-->
-    <section class="p-5 bg-black">
-     <div class="row justify-content-center py-5">
-
-       <div class="col-lg-4 d-none d-md-block d-lg-block d-xl-block">
-        <video  muted="" controls="" playsinline="" poster="/jpegs/TGA21_SaveTheDate_Placeholder_01.jpeg" placeholder="/pngs/video-placeholder-celebrate.png" class="jsx-801790430 h-[550px]" autoplay="">
-          <source src="https://thegameawards.com/video/home-spotlight.mp4" type="video/mp4" class="jsx-801790430">
-        </video>
-       </div>
-
-       <div class="offset-lg-1 col-lg-3">
-        <h1 class="outfit-bold-font pb-5 text-light text-uppercase" style="font-size: -webkit-xxx-large !important;">
-          Uma  <span class="text-array">nova</span> maneira de aprender <span class="text-array">programação</span>.
-        </h1>
-       <p class="lead text-light outfit-font pb-4">
-         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates mollitia dolorem odio libero reprehenderit itaque dolorum temporibus similique iusto! Facilis asperiores quaerat culpa incidunt ad numquam excepturi voluptatibus distinctio consequuntur!
-       </p>
-       <button class="btn btn-xl square-button bg-success outfit-bold-font">SAIBA MAIS</button>
       </div>
-
-     </div>
     </section>
 
-
-    <section class="p-5 pb-0 bg-white">
-        <br>
-        <div class="float-start">
-          <h1 class="text-array font-weight-bold outfit-bold-font" style="position: relative; left: 75px">MAIS PROCURADOS</h1>
+    <section class="p-5 pb-0 bg-white" style="position: relative; top: -10px">
+      <br>
+      <div class="container">
+        <div class="float-left">
+          <h2 class="text-array font-weight-bold outfit-bold-font text-uppercase" style="position: relative; left: -90px">Mais Procurados</h2>
         </div>
-        <div class="float-end">
-          <a href="#" class="nav-link lead font-weight-bold outfit-bold-font" style="position: relative; left: -60px">Todos os Cursos <span class="p-3"><i class="fa fa-arrow-circle-right"></i></span></a>
+        <div class="float-right">
+          <a href="#" class="nav-link lead outfit-font" style="position: relative; left: 120px">Todos os Cursos <span class="p-3"><i class="fa fa-arrow-circle-right"></i></span></a>
         </div>
-
-        <div class="clearfix"></div>
-        
-        
-        <div class="row" style="position: relative; top: -20px">
-          <div class="center slider">
-            <div>
-              <a href="#1">
-                <img src="http://placehold.it/500x300?text=1">
-              </a>
-              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
-              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
-                <h4 class="font-weight-bold outfit-bold-font my-auto">FRONT END PARA LARAVEL</h4>
-              </a>
-            </div>
-            <div>
-              <a href="#2">
-                <img src="http://placehold.it/500x300?text=2">
-              </a>
-              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
-              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
-                <h4 class="font-weight-bold outfit-bold-font my-auto">ESTRUTURA DE DADOS EM C</h4>
-              </a>
-            </div>
-            <div>
-              <a href="#3">
-                <img src="http://placehold.it/500x300?text=3">
-              </a>
-              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
-              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
-                <h4 class="font-weight-bold outfit-bold-font my-auto">PROGRAMAÇÃO ORIENTADA A OBJETOS EM PHP</h4>
-              </a>
-            </div>
-            <div>
-              <a href="#4">
-                <img src="http://placehold.it/500x300?text=4">
-              </a>
-              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
-              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
-                <h4 class="font-weight-bold outfit-bold-font my-auto">PROGRAMAÇÃO ORIENTADA A OBJETOS EM C</h4>
-              </a>
-            </div>
-            <div>
-              <a href="#5">
-                <img src="http://placehold.it/500x300?text=5">
-              </a>
-              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
-              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
-                <h4 class="font-weight-bold outfit-bold-font my-auto">PROGRAMAÇÃO ESTRUTURADA EM C</h4>
-              </a>
-            </div>
-            <div>
-              <a href="#6">
-                <img src="http://placehold.it/500x300?text=6">
-              </a>
-              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
-              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
-                <h4 class="font-weight-bold outfit-bold-font my-auto">LOGICA DE PROGRAMAÇÃO</h4>
-              </a>
-            </div>
-            <div>
-              <a href="#7">
-                <img src="http://placehold.it/500x300?text=7">
-              </a>
-              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
-              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
-                <h4 class="font-weight-bold outfit-bold-font my-auto">ANGULAR PARA INICIANTES</h4>
-              </a>
-            </div>
-            <div>
-              <a href="#8">
-                <img src="http://placehold.it/500x300?text=8">
-              </a>
-              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
-              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
-                <h4 class="font-weight-bold outfit-bold-font my-auto">LARAVEL PARA INICIANTES</h4>
-              </a>
-            </div>
-            <div>
-              <a href="#9">
-                <img src="http://placehold.it/500x300?text=9">
-              </a>
-              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
-              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
-                <h4 class="font-weight-bold outfit-bold-font my-auto">VUE PARA INICIANTES</h4>
-              </a>
-            </div>
-          </div>
-
-        </div><!--row-->
-    </section>
-
-    <section class="p-5 pt-0 bg-white">
-      <div class="float-start">
-        <h2 class="text-array font-weight-bold outfit-bold-font" style="position: relative; left: 50px">CATEGORIAS</h2>
       </div>
-      <div class="float-end">
-        <a href="#" class="nav-link lead font-weight-bold outfit-bold-font" style="position: relative; left: -55px">Todos os Categorias <span class="p-3"><i class="fa fa-arrow-circle-right"></i></span></a>
-      </div>
+
       <div class="clearfix"></div>
       
-      <div class="container-fluid p-5">
-        <div class="row justify-content-between py-4">
-          <div class="col-sm-3">
-            <div class="card mb-4" id="category">
-              <div class="card-body">
-                <h5 class="card-title">Desenvolvimento Web</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              </div>
+      <div class="row" style="position: relative; top: -35px">
+        <div class="multiple-items slider">
+          <div>
+            <a href="#1">
+              <img src="http://placehold.it/600x300?text=1">
+            </a>
+            <!-- <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label> -->
+            <br>
+            <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+              <h5 class="outfit-font my-auto">FRONT END PARA LARAVEL</h5>
+            </a>
+          </div>
+          <div>
+            <a href="#2">
+              <img src="http://placehold.it/600x300?text=2">
+            </a>
+            <!-- <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label> -->
+            <br>
+            <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+              <h5 class="outfit-font my-auto">ESTRUTURA DE DADOS EM C</h5>
+            </a>
+          </div>
+          <div>
+            <a href="#3">
+              <img src="http://placehold.it/600x300?text=3">
+            </a>
+            <!-- <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label> -->
+            <br>
+            <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+              <h5 class="outfit-font my-auto">PROGRAMAÇÃO ORIENTADA A OBJETOS EM PHP</h5>
+            </a>
+          </div>
+          <div>
+            <a href="#4">
+              <img src="http://placehold.it/600x300?text=4">
+            </a>
+            <!-- <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label> -->
+            <br>
+            <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+              <h5 class="outfit-font my-auto">PROGRAMAÇÃO ORIENTADA A OBJETOS EM C</h5>
+            </a>
+          </div>
+          <div>
+            <a href="#5">
+              <img src="http://placehold.it/600x300?text=5">
+            </a>
+            <!-- <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label> -->
+            <br>
+            <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+              <h5 class="outfit-font my-auto">PROGRAMAÇÃO ESTRUTURADA EM C</h5>
+            </a>
+          </div>
+          <div>
+            <a href="#6">
+              <img src="http://placehold.it/600x300?text=6">
+            </a>
+            <!-- <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label> -->
+            <br>
+            <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+              <h5 class="outfit-font my-auto">LOGICA DE PROGRAMAÇÃO</h5>
+            </a>
+          </div>
+          <div>
+            <a href="#7">
+              <img src="http://placehold.it/600x300?text=7">
+            </a>
+            <!-- <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label> -->
+            <br>
+            <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+              <h5 class="outfit-font my-auto">ANGULAR PARA INICIANTES</h5>
+            </a>
+          </div>
+          <div>
+            <a href="#8">
+              <img src="http://placehold.it/600x300?text=8">
+            </a>
+            <!-- <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label> -->
+            <br>
+            <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+              <h5 class="outfit-font my-auto">LARAVEL PARA INICIANTES</h5>
+            </a>
+          </div>
+          <div>
+            <a href="#9">
+              <img src="http://placehold.it/600x300?text=9">
+            </a>
+            <!-- <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label> -->
+            <br>
+            <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+              <h5 class="outfit-font my-auto">VUE PARA INICIANTES</h5>
+            </a>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+
+  <section class="p-5 bg-dark" style="position: relative; top: -30px">
+    <div class="container p-0" style="max-width: 1300px !important;">
+      <h4 class="text-secondary outfit-font text-uppercase pb-3">Procure por categoria</h4>
+      <h1 class="outfit-bold-font pb-4 text-light text-uppercase" style="font-size: -webkit-xxx-large !important;">
+        Uma  <span class="text-array">nova</span> maneira de aprender <span class="text-array">programação</span>.
+      </h1>
+      <p class="lead text-light outfit-font pb-3">
+        Build new skills for that “this is my year” feeling with courses, certificates, and degrees from world\-class universities and companies.
+      </p>
+    </div>
+  </section>
+
+  <section class="p-5">
+    <div class="container p-0" style="max-width: 1300px !important;">
+      <h2 class="text-array font-weight-bold outfit-bold-font text-uppercase pb-3">Procure por categoria</h2>
+      <div class="row py-4">
+        <div class="col-lg-auto col-md-4 col-sm-12">
+          <div class="card mb-4">
+            <div class="card-body position-relative">
+              <h6 class="card-title text-center my-auto py-auto">PROGRAMAÇÃO ORIENTADA A OBJETOS</h6>
+              <small>150 Cursos</small>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="card mb-4" id="category">
-              <div class="card-body">
-                <h5 class="card-title">Angular</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              </div>
+        </div>
+        <div class="col-lg-auto col-md-4 col-sm-12">
+          <div class="card mb-4">
+            <div class="card-body position-relative">
+              <h6 class="card-title text-center my-auto py-auto">PROGRAMAÇÃO ESTRUTURADA</h6>
+              <small>150 Cursos</small>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="card mb-4" id="category">
-              <div class="card-body">
-                <h5 class="card-title">PHP</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              </div>
+        </div>
+        <div class="col-lg-auto col-md-4 col-sm-12">
+          <div class="card mb-4">
+            <div class="card-body position-relative">
+              <h6 class="card-title text-center my-auto py-auto">ESTRUTURA DE DADOS</h6>
+              <small>150 Cursos</small>
             </div>
           </div>
-          <div class="col-sm-3">
-            <div class="card mb-4" id="category">
-              <div class="card-body">
-                <h5 class="card-title">JavaScript</h5>
-                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-              </div>
+        </div>
+        <div class="col-lg-auto col-md-4 col-sm-12">
+          <div class="card mb-4">
+            <div class="card-body position-relative">
+              <h6 class="card-title text-center my-auto py-auto">FRONT-END</h6>
+              <small>150 Cursos</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-auto col-md-4 col-sm-12">
+          <div class="card mb-4">
+            <div class="card-body position-relative">
+              <h6 class="card-title text-center my-auto py-auto">BACK-END</h6>
+              <small>150 Cursos</small>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer id="footer" class="footer">
-      <div class="footer-top">
-          <div class="container">
-              <div class="row">
-                  <div class="col-lg-3 col-md-6 footer-links">
-                      <h4>Useful Links</h4>
-                      <ul>
-                          <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                          <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                          <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                          <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                          <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                      </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 footer-links">
-                      <h4>Our Services</h4>
-                      <ul>
-                          <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                          <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                          <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                          <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                          <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-                      </ul>
-                  </div>
-                  <div class="col-lg-3 col-md-6 footer-contact">
-                      <h4>Contact Us</h4>
-                      <p> A108 Adam Street <br> New York, NY 535022<br> United States <br><br> <strong>Phone:</strong> +1 5589 55488 55<br> <strong>Email:</strong> info@example.com<br> </p>
-                  </div>
-                  <div class="col-lg-3 col-md-6 footer-info">
-                      <h3>Array</h3>
-                      <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-                      <div class="social-links mt-3"> <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </footer>
+  <section class="p-5 bg-light">
+    <div class="container p-0" style="max-width: 1300px !important;">
+      <h4 class="text-secondary outfit-font text-uppercase pb-3">Procurando por novidades?</h4>
+      <h1 class="outfit-bold-font pb-4 text-secondary text-uppercase">
+        Acompanhe nosso <span class="text-info">podcast</span> <i class="fab fa-spotify"></i>.
+      </h1>
+      <p class="lead text-dark outfit-font pb-3 w-50">
+        Build new skills for that “this is my year” feeling with courses, certificates, and degrees from world\-class universities and companies.
+      </p>
+    </div>
+  </section>
+    
+  </main>
 
+
+  <footer id="footer" class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-contact">
+                    <h4>Contact Us</h4>
+                    <p> A108 Adam Street <br> New York, NY 535022<br> United States <br><br> <strong>Phone:</strong> +1 5589 55488 55<br> <strong>Email:</strong> info@example.com<br> </p>
+                </div>
+                <div class="col-lg-3 col-md-6 footer-info">
+                    <h3>Array</h3>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                    <div class="social-links mt-3"> <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
     <!-- Scripts -->
 
@@ -377,16 +352,32 @@
 
     <script type="text/javascript">
       $(document).on('ready', function() {
-        $(".center").slick({
-          dots: false,
+        // $(".multiple-items").slick({
+        //   dots: false,
+        //   infinite: true,
+        //   centerMode: true,
+        //   autoplay: true,
+        //   autoplaySpeed: 2000,
+        //   arrowMode: false,
+        //   arrows: false,
+        //   slidesToShow: 4,
+        // });
+
+        $('.multiple-items').slick({
           infinite: true,
-          centerMode: true,
           autoplay: true,
-          autoplaySpeed: 2000,
-          /*arrowMode: false,
-          arrows: false,*/
-          slidesToShow: 3,
-          slidesToScroll: 5
+          focus: false,
+          
+          focused: false,
+          focusOnChange: false,
+          focusOnSelect: false,
+          accessibility: false,
+          autoplaySpeed: 1500,
+          arrowMode: false,
+          arrows: false,
+          dots: true,
+          slidesToShow: 4,
+          slidesToScroll: 3
         });
       });
   </script>

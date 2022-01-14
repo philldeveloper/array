@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--slick-->
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick-theme.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    <!--css-->
+    <link rel="stylesheet" href="./categories.css">
+    <link rel="stylesheet" href="./test.css">
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Saira:wght@700&display=swap" rel="stylesheet">
+
+    <!--fontawesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <style type="text/css">
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+  
+      * {
+        box-sizing: border-box;
+      }
+  
+      .slider {
+        width: 90%;
+        margin: 100px auto;
+      }
+  
+      .slick-slide {
+        margin: 0px 40px;
+      }
+  
+      .slick-slide img {
+        width: 100%;
+      }
+  
+      .slick-prev:before,
+      .slick-next:before {
+        color: rgb(92, 5, 114);
+      }
+  
+      .slick-slide {
+        transition: all ease-in-out .3s;
+        opacity: .2;
+      }
+      
+      .slick-active {
+        opacity: .5;
+      }
+  
+      .slick-current {
+        opacity: 1;
+      }
+    </style>
+    
+</head>
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <a class="navbar-brand" href="#">Fixed navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline mt-2 mt-md-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <main role="main" class="container">
+    <div class="jumbotron">
+      <h1>Navbar example</h1>
+      <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it will remain fixed to the top of your browser's viewport.</p>
+      <a class="btn btn-lg btn-primary" href="../../components/navbar/" role="button">View navbar docs &raquo;</a>
+    </div>
+  </main>
+  
+    <nav class="navbar navbar-light bg-white fixed-top" id="main">
+        <div class="container-fluid">
+          <a class="navbar-brand font-weight-bold outfit-bold-font my-auto" href="./index.html">ARRAY</a>
+          <a type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+            <p class="font-weight-bold outfit-bold-font my-auto">ACESSAR MENU</p>
+          </a>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title text-array font-weight-bold outfit-bold-font my-auto" id="offcanvasNavbarLabel">Array</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./catalogo-cursos.html">Catálogo de Cursos</a>
+                </li>
+                <!--li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li-->
+              </ul>
+              <label for="" class="font font-weight-bold outfit-bold-font my-auto text-uppercase py-3">Pesquise por um Curso:</label>
+              <form class="d-flex">
+                <input class="form-control me-2" required type="search" placeholder="Search" aria-label="Search">
+                <button class="btn text-white" style="background-color: #A20ADF !important;" type="submit"><i class="fa fa-search"></i></button>
+              </form>
+
+              <!--RESULTS FROM FORM SEARCH-->
+              <div class="py-4">
+                <label for="" class="text-secondary font-weight-bold outfit-bold-font my-auto text-uppercase py-3">RESULTADOS ENCONTRADOS:</label>
+                <hr>
+
+                <ul class="list-group border-0">
+                  <li class="border-0 nav-link list-group-item d-flex justify-content-between align-items-center">
+                    <a class="" href="#">A list item</a>
+                    <span class="badge bg-primary rounded-pill">14</span>
+                  </li>
+                  <li class="border-0 nav-link list-group-item d-flex justify-content-between align-items-center">
+                    <a class="" href="#">A second list item</a>
+                    <span class="badge bg-primary rounded-pill">2</span>
+                  </li>
+                  <li class="border-0 nav-link list-group-item d-flex justify-content-between align-items-center">
+                    <a class="" href="#">A third list item</a>
+                    <span class="badge bg-primary rounded-pill">1</span>
+                  </li>
+                </ul>
+              </div>
+
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 py-lg-4" style="position: fixed; bottom: 0;">
+                <li class="nav-item">
+                  <a class="navbar-brand font-weight-bold outfit-bold-font my-auto" href="#">Fazer Login</a>
+                </li>
+                <li class="nav-item">
+                  <a class="navbar-brand font-weight-bold outfit-bold-font text-primary my-auto" href="#">Criar uma Conta</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <!--navbar-end-->
+
+
+
+      <section class="p-5 bg-light-0 section-photo">
+        <div class="">
+            <div class="text-center">
+                <h1 class="display-1 text-light saira-font"> <span class="text-white">CODE</span> DAY <span class="">70%</span></h1>
+                <h3 class="saira-font text-light pb-5">LOREM IPSUM DORMO EPSUM</h3>
+                <button class="btn btn-xl square-button outfit-bold-font">ESTUDAR AGORA</button>
+            </div>
+        </div>
+      </section>
+
+    
+    <section class="p-5 bg-black">
+     <div class="row justify-content-center py-5">
+
+       <div class="col-lg-4 d-none d-md-block d-lg-block d-xl-block">
+        <video  muted="" controls="" playsinline="" poster="/jpegs/TGA21_SaveTheDate_Placeholder_01.jpeg" placeholder="/pngs/video-placeholder-celebrate.png" class="jsx-801790430 h-[550px]" autoplay="">
+          <source src="https://thegameawards.com/video/home-spotlight.mp4" type="video/mp4" class="jsx-801790430">
+        </video>
+       </div>
+
+       <div class="offset-lg-1 col-lg-3">
+        <h1 class="outfit-bold-font pb-5 text-light text-uppercase" style="font-size: -webkit-xxx-large !important;">
+          Uma  <span class="text-array">nova</span> maneira de aprender <span class="text-array">programação</span>.
+        </h1>
+       <p class="lead text-light outfit-font pb-4">
+         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates mollitia dolorem odio libero reprehenderit itaque dolorum temporibus similique iusto! Facilis asperiores quaerat culpa incidunt ad numquam excepturi voluptatibus distinctio consequuntur!
+       </p>
+       <button class="btn btn-xl square-button bg-success outfit-bold-font">SAIBA MAIS</button>
+      </div>
+
+     </div>
+    </section>
+
+    <section class="p-5 pb-0 bg-dark">
+        <br>
+        <div class="float-start">
+          <h1 class="text-array font-weight-bold outfit-bold-font" style="position: relative; left: 75px">MAIS PROCURADOS</h1>
+        </div>
+        <div class="float-end">
+          <a href="#" class="nav-link lead font-weight-bold outfit-bold-font" style="position: relative; left: -60px">Todos os Cursos <span class="p-3"><i class="fa fa-arrow-circle-right"></i></span></a>
+        </div>
+
+        <div class="clearfix"></div>
+        
+        
+        <div class="row" style="position: relative; top: -20px">
+          <div class="center slider">
+            <div>
+              <a href="#1">
+                <img src="http://placehold.it/500x300?text=1">
+              </a>
+              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
+              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+                <h4 class="font-weight-bold outfit-bold-font my-auto">FRONT END PARA LARAVEL</h4>
+              </a>
+            </div>
+            <div>
+              <a href="#2">
+                <img src="http://placehold.it/500x300?text=2">
+              </a>
+              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
+              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+                <h4 class="font-weight-bold outfit-bold-font my-auto">ESTRUTURA DE DADOS EM C</h4>
+              </a>
+            </div>
+            <div>
+              <a href="#3">
+                <img src="http://placehold.it/500x300?text=3">
+              </a>
+              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
+              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+                <h4 class="font-weight-bold outfit-bold-font my-auto">PROGRAMAÇÃO ORIENTADA A OBJETOS EM PHP</h4>
+              </a>
+            </div>
+            <div>
+              <a href="#4">
+                <img src="http://placehold.it/500x300?text=4">
+              </a>
+              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
+              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+                <h4 class="font-weight-bold outfit-bold-font my-auto">PROGRAMAÇÃO ORIENTADA A OBJETOS EM C</h4>
+              </a>
+            </div>
+            <div>
+              <a href="#5">
+                <img src="http://placehold.it/500x300?text=5">
+              </a>
+              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
+              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+                <h4 class="font-weight-bold outfit-bold-font my-auto">PROGRAMAÇÃO ESTRUTURADA EM C</h4>
+              </a>
+            </div>
+            <div>
+              <a href="#6">
+                <img src="http://placehold.it/500x300?text=6">
+              </a>
+              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
+              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+                <h4 class="font-weight-bold outfit-bold-font my-auto">LOGICA DE PROGRAMAÇÃO</h4>
+              </a>
+            </div>
+            <div>
+              <a href="#7">
+                <img src="http://placehold.it/500x300?text=7">
+              </a>
+              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
+              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+                <h4 class="font-weight-bold outfit-bold-font my-auto">ANGULAR PARA INICIANTES</h4>
+              </a>
+            </div>
+            <div>
+              <a href="#8">
+                <img src="http://placehold.it/500x300?text=8">
+              </a>
+              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
+              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+                <h4 class="font-weight-bold outfit-bold-font my-auto">LARAVEL PARA INICIANTES</h4>
+              </a>
+            </div>
+            <div>
+              <a href="#9">
+                <img src="http://placehold.it/500x300?text=9">
+              </a>
+              <label for="course-card" class="mt-4 lead font-italic aria-font">03 de Dezembro, 2021</label>
+              <a href="./catalogo-cursos.html" class="ml-0 pl-0" style="text-decoration: none;">
+                <h4 class="font-weight-bold outfit-bold-font my-auto">VUE PARA INICIANTES</h4>
+              </a>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+    <section class="p-5 pt-0 bg-dark">
+      <div class="float-start">
+        <h2 class="text-array font-weight-bold outfit-bold-font" style="position: relative; left: 50px">CATEGORIAS</h2>
+      </div>
+      <div class="float-end">
+        <a href="#" class="nav-link lead font-weight-bold outfit-bold-font" style="position: relative; left: -55px">Todos os Categorias <span class="p-3"><i class="fa fa-arrow-circle-right"></i></span></a>
+      </div>
+      <div class="clearfix"></div>
+      
+      <div class="container-fluid p-5">
+        <div class="row justify-content-between py-4">
+          <div class="col-sm-3">
+            <div class="card mb-4" id="category">
+              <div class="card-body">
+                <h5 class="card-title">Desenvolvimento Web</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card mb-4" id="category">
+              <div class="card-body">
+                <h5 class="card-title">Angular</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card mb-4" id="category">
+              <div class="card-body">
+                <h5 class="card-title">PHP</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3">
+            <div class="card mb-4" id="category">
+              <div class="card-body">
+                <h5 class="card-title">JavaScript</h5>
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer" class="footer">
+      <div class="footer-top">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-3 col-md-6 footer-links">
+                      <h4>Useful Links</h4>
+                      <ul>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6 footer-links">
+                      <h4>Our Services</h4>
+                      <ul>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                          <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-lg-3 col-md-6 footer-contact">
+                      <h4>Contact Us</h4>
+                      <p> A108 Adam Street <br> New York, NY 535022<br> United States <br><br> <strong>Phone:</strong> +1 5589 55488 55<br> <strong>Email:</strong> info@example.com<br> </p>
+                  </div>
+                  <div class="col-lg-3 col-md-6 footer-info">
+                      <h3>Array</h3>
+                      <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                      <div class="social-links mt-3"> <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a> <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a> <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a> <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+
+    <!-- Scripts -->
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="./assets/slick/slick.js"></script>
+
+
+    <script type="text/javascript">
+      $(document).on('ready', function() {
+        $(".center").slick({
+          dots: false,
+          infinite: true,
+          centerMode: true,
+          autoplay: true,
+          autoplaySpeed: 2000,
+          /*arrowMode: false,
+          arrows: false,*/
+          slidesToShow: 3,
+          slidesToScroll: 5
+        });
+      });
+  </script>
+</body>
+</html>
