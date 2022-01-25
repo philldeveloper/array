@@ -4,6 +4,30 @@ nav.navbar#main{
     padding: 0px 20px 0px 20px;
 }
 
+.active{
+    background-color: #fff !important;
+    border: 2px solid #A20ADF !important;
+    color: #fff !important;
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    text-decoration: none !important;
+    text-decoration-line: none !important;
+    text-decoration-style: none !important;
+}
+
+.active:focus a>h6{
+    color: #fff !important;
+}
+
+.box{
+    flex: 1 1 auto;
+    min-height: 1px;
+    padding: 1.25rem;
+    background-color: #f8f9fa;
+    text-decoration: none !important;
+}
+
 /* .container{
     max-width: 1300px !important;
 } */
@@ -30,6 +54,21 @@ nav.navbar#main{
 
 .border-array{
     border: 1px solid #7a04a8 !important;
+}
+
+.border-course-gaming{
+    border-top: 5px solid !important;
+    border-image: linear-gradient(to right, grey 25%, #7a04a8 25%, #7a04a8 50%,red 50%, red 75%, teal 75%) 5 !important;
+}
+
+.border-course-st-level{
+    border-top: 5px solid !important;
+    border-image: linear-gradient(to right, black 25%, black 25%, black 50%,black 50%, black 75%, teal 75%) 5 !important;
+}
+
+.border-course-online{
+    border-top: 5px solid !important;
+    border-image: linear-gradient(to right, black 25%, black 25%, black 50%,black 50%, black 75%, red 75%) 5 !important;
 }
 
 .border-category-card{
@@ -88,6 +127,16 @@ ul.list-group.list-group-flush>li.list-group-item{
     font-family: 'Outfit', sans-serif !important;
     font-weight: 600 !important;
     letter-spacing: 2px;
+}
+
+.square-button-sm{
+    border-radius: 0px !important;
+    width: 200px !important;
+    height: 62px !important;
+    color: #eeeeee !important;
+    font-family: 'Outfit', sans-serif !important;
+    font-weight: 500 !important;
+    /* letter-spacing: 2px; */
 }
 
 .btn-array{
