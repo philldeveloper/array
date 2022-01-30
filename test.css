@@ -270,3 +270,11 @@ footer#footer .footer-top .footer-contact {
 footer#footer .footer-top .footer-contact p {
     line-height: 26px
 }
+
+.progress{
+    height: 0.5rem !important;
+}
+
+.progress-bar{
+    /* background: #7a04a8 !important; */
+}
